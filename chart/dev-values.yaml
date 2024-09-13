@@ -1,7 +1,7 @@
 catalog:
   tag: "a41db7"
 orders_db:
-  tag: "73e2b2"
+  tag: "4"
 catalog_db:
   tag: "a41db7"
 cart:
@@ -9,9 +9,9 @@ cart:
 cart_dynamodb:
   tag: "4"
 orders:
-  tag: "73e2b2"
+  tag: "4"
 orders_db_rabbitmq:
-  tag: "73e2b2"
+  tag: "4"
 checkout-api:
   tag: "3"
 checkout_db:
