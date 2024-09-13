@@ -21,8 +21,8 @@ assets:
 ui:
   tag: "21"
 catalog-api:
-  tag: "33"
+  tag: "2"
 catalog-db:
-  tag: "33"
+  tag: "2"
 checkout-db:
   tag: "2"
