@@ -12,7 +12,7 @@ orders:
   tag: "73e2b2"
 orders_db_rabbitmq:
   tag: "73e2b2"
-checkout:
+checkout-api:
   tag: "1b00c5"
 checkout_db:
   tag: "1b00c5"
