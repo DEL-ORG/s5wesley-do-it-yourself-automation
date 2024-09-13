@@ -17,7 +17,7 @@ checkout-api:
 checkout_db:
   tag: "3"
 assets:
-  tag: "6"
+  tag: "3"
 ui:
   tag: "21"
 catalog-api:
