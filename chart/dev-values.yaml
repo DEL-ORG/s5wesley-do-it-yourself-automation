@@ -13,7 +13,7 @@ orders:
 orders_db_rabbitmq:
   tag: "73e2b2"
 checkout-api:
-  tag: "1b00c5"
+  tag: "2"
 checkout_db:
   tag: "1b00c5"
 assets:
@@ -24,3 +24,5 @@ catalog-api:
   tag: "33"
 catalog-db:
   tag: "33"
+checkout-db:
+  tag: "2"
