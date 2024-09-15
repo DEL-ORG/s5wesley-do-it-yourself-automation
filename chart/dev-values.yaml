@@ -1,28 +1,30 @@
 catalog:
   tag: "a41db7"
 orders_db:
-  tag: "4"
+  tag: "5"
 catalog_db:
   tag: "a41db7"
 cart:
-  tag: "7"
+  tag: "5"
 cart_dynamodb:
   tag: "7"
 orders:
-  tag: "4"
+  tag: "5"
 orders_db_rabbitmq:
-  tag: "4"
+  tag: "5"
 checkout-api:
-  tag: "3"
+  tag: "5"
 checkout_db:
-  tag: "3"
+  tag: "5"
 assets:
-  tag: "3"
+  tag: "5"
 ui:
-  tag: "22"
+  tag: "5"
 catalog-api:
-  tag: "2"
+  tag: "5"
 catalog-db:
-  tag: "2"
+  tag: "5"
 checkout-db:
   tag: "2"
+cart-dynamodb:
+  tag: "5"
