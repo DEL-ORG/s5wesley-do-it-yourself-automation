@@ -4,6 +4,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: catalog
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: catalog-0.0.1
     app.kubernetes.io/name: catalog
@@ -17,6 +18,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: catalog-db
+  namespace: wesley-argocd  # Added namespace
 data:
   username: "Y2F0YWxvZw=="
   password: "WkI4V1l2dFM5dndVNmlBNQ=="
@@ -26,6 +28,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: catalog
+  namespace: wesley-argocd  # Added namespace
 data:
   DB_ENDPOINT: catalog-mysql:3306
   DB_READ_ENDPOINT: catalog-mysql:3306
@@ -36,6 +39,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: catalog-mysql
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: catalog-0.0.1
     app.kubernetes.io/name: catalog
@@ -59,6 +63,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: catalog
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: catalog-0.0.1
     app.kubernetes.io/name: catalog
@@ -84,6 +89,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalog
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: catalog-0.0.1
     app.kubernetes.io/name: catalog
@@ -172,6 +178,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: catalog-mysql
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: catalog-0.0.1
     app.kubernetes.io/name: catalog
@@ -229,6 +236,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: carts
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: carts-0.0.1
     app.kubernetes.io/name: carts
@@ -242,6 +250,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: carts
+  namespace: wesley-argocd  # Added namespace
 data:
   SPRING_PROFILES_ACTIVE: dynamodb
   CARTS_DYNAMODB_TABLENAME: Items
@@ -256,6 +265,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: carts-dynamodb
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: carts-0.0.1
     app.kubernetes.io/name: carts
@@ -269,6 +279,7 @@ spec:
       targetPort: dynamodb
       protocol: TCP
       name: dynamodb
+      namespace: wesley-argocd  # Added namespace
   selector:
     app.kubernetes.io/name: carts
     app.kubernetes.io/instance: carts
@@ -279,6 +290,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: carts
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: carts-0.0.1
     app.kubernetes.io/name: carts
@@ -304,6 +316,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: carts
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: carts-0.0.1
     app.kubernetes.io/name: carts
@@ -384,6 +397,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: carts-dynamodb
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: carts-0.0.1
     app.kubernetes.io/name: carts
@@ -419,6 +433,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: orders
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -432,6 +447,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: orders-db
+  namespace: wesley-argocd  # Added namespace
 data:
   username: "b3JkZXJz"
   password: "YVYzZmhyTmJ2dmtwUzBBVQ=="
@@ -448,6 +464,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: orders
+  namespace: wesley-argocd  # Added namespace
 data:
   RETAIL_ORDERS_MESSAGING_PROVIDER: rabbitmq
   SPRING_DATASOURCE_URL: jdbc:postgresql://orders-postgresql:5432/orders
@@ -458,6 +475,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: orders-postgresql
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -481,6 +499,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: orders-rabbitmq
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -508,6 +527,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: orders
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -533,6 +553,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: orders
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -625,6 +646,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: orders-postgresql
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -681,6 +703,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: orders-rabbitmq
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: orders-0.0.1
     app.kubernetes.io/name: orders
@@ -726,6 +749,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: checkout
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: checkout-0.0.1
     app.kubernetes.io/name: checkout
@@ -739,6 +763,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: checkout
+  namespace: wesley-argocd  # Added namespace
 data:
   REDIS_URL: redis://checkout-redis:6379
   ENDPOINTS_ORDERS: http://orders:80
@@ -748,6 +773,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: checkout-redis
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: checkout-0.0.1
     app.kubernetes.io/name: checkout
@@ -771,6 +797,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: checkout
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: checkout-0.0.1
     app.kubernetes.io/name: checkout
@@ -796,6 +823,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: checkout
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: checkout-0.0.1
     app.kubernetes.io/name: checkout
@@ -873,6 +901,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: checkout-redis
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: checkout-0.0.1
     app.kubernetes.io/name: checkout
@@ -908,6 +937,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: assets
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: assets-0.0.1
     app.kubernetes.io/name: assets
@@ -921,6 +951,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: assets
+  namespace: wesley-argocd  # Added namespace
 data:
   PORT: '8080'
 ---
@@ -929,6 +960,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: assets
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: assets-0.0.1
     app.kubernetes.io/name: assets
@@ -954,6 +986,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: assets
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: assets-0.0.1
     app.kubernetes.io/name: assets
@@ -1026,6 +1059,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: ui
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: ui-0.0.1
     app.kubernetes.io/name: ui
@@ -1039,6 +1073,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ui
+  namespace: wesley-argocd  # Added namespace
 data:
   
   ENDPOINTS_CATALOG: http://catalog
@@ -1052,6 +1087,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ui
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: ui-0.0.1
     app.kubernetes.io/name: ui
@@ -1077,6 +1113,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ui
+  namespace: wesley-argocd  # Added namespace
   labels:
     helm.sh/chart: ui-0.0.1
     app.kubernetes.io/name: ui
