@@ -1,26 +1,30 @@
 catalog:
   tag: "a41db7"
 orders_db:
-  tag: "73e2b2"
+  tag: "6"
 catalog_db:
   tag: "a41db7"
 cart:
-  tag: "4"
+  tag: "6"
 cart_dynamodb:
-  tag: "4"
+  tag: "7"
 orders:
-  tag: "73e2b2"
+  tag: "6"
 orders_db_rabbitmq:
-  tag: "73e2b2"
+  tag: "6"
 checkout-api:
-  tag: "1b00c5"
+  tag: "6"
 checkout_db:
-  tag: "1b00c5"
+  tag: "6"
 assets:
   tag: "6"
 ui:
-  tag: "21"
+  tag: "6"
 catalog-api:
-  tag: "33"
+  tag: "6"
 catalog-db:
-  tag: "33"
+  tag: "6"
+checkout-db:
+  tag: "2"
+cart-dynamodb:
+  tag: "6"
