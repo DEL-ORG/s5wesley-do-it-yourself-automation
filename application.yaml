@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: s5wesley-do-it-yourself
-  namespace: argocd
+  namespace: argocd  # ArgoCD's namespace
 spec:
   project: default
 
@@ -10,12 +10,14 @@ spec:
     repoURL: https://github.com/DEL-ORG/s5wesley-do-it-yourself-automation.git
     targetRevision: HEAD
     path: chart
-    server: https://kubernetes.default.svc
-    namespace: wesley-app
+
+  destination:
+    server: https://kubernetes.default.svc  # The Kubernetes API server
+    namespace: wesley-app  # The namespace where you want to deploy the application
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
 
     automated:
       selfHeal: true
