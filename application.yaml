@@ -9,8 +9,7 @@ spec:
   source:
     repoURL: https://github.com/DEL-ORG/s5wesley-do-it-yourself-automation.git
     targetRevision: HEAD
-    path: chart/templates
-  destination: 
+    path: chart
     server: https://kubernetes.default.svc
     namespace: wesley-app
 
