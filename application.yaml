@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: s5wesley-do-it-yourself
-  namespace: s5wesley-argocd
+  namespace: argocd
 spec:
   project: default
 
